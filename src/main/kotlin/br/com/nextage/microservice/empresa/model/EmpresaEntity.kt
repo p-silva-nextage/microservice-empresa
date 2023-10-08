@@ -19,5 +19,5 @@ data class EmpresaEntity(
         @Column(name = "cnpj")
         var cnpj: String? = null,
         @OneToMany(mappedBy = "empresa", cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
-        var categorias: List<CategoriaProdutoEntity> = mutableListOf()
+        var categorias: List<ClienteEntity> = mutableListOf()
 ) : Serializable
